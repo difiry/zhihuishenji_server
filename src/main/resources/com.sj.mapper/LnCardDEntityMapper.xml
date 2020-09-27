@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sj.mapper.LnCardDEntityMapper">
+  <resultMap id="BaseResultMap" type="com.wj.entity.LnCardDEntity">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="LN_TYPE" jdbcType="VARCHAR" property="lnType" />
+    <result column="CARD_NO" jdbcType="VARCHAR" property="cardNo" />
+    <result column="E_ACCT_NO" jdbcType="VARCHAR" property="eAcctNo" />
+    <result column="CUST_NAME" jdbcType="VARCHAR" property="custName" />
+    <result column="CUST_NO" jdbcType="VARCHAR" property="custNo" />
+    <result column="BEGIN_DT" jdbcType="VARCHAR" property="beginDt" />
+    <result column="LN_BAL" jdbcType="DECIMAL" property="lnBal" />
+    <result column="LN_PRIOD" jdbcType="VARCHAR" property="lnPriod" />
+    <result column="FEE_RATE" jdbcType="DECIMAL" property="feeRate" />
+    <result column="LN_INIT_D" jdbcType="DECIMAL" property="lnInitD" />
+    <result column="PRODUCT_AREA" jdbcType="VARCHAR" property="productArea" />
+    <result column="CONTRACT_NO" jdbcType="VARCHAR" property="contractNo" />
+    <result column="GUARANTEE_COMPANG" jdbcType="VARCHAR" property="guaranteeCompang" />
+    <result column="GUARANTEE_TYPE" jdbcType="VARCHAR" property="guaranteeType" />
+    <result column="SP_COMPANY" jdbcType="VARCHAR" property="spCompany" />
+    <result column="PRODUCT_TYPE" jdbcType="VARCHAR" property="productType" />
+    <result column="PRODUCT_NAME" jdbcType="VARCHAR" property="productName" />
+    <result column="CREATE_TIME" jdbcType="VARCHAR" property="createTime" />
+    <result column="UPDATE_TIME" jdbcType="VARCHAR" property="updateTime" />
+    <result column="CREATE_USER" jdbcType="VARCHAR" property="createUser" />
+    <result column="UPDATE_USER" jdbcType="VARCHAR" property="updateUser" />
+    <result column="LN_CARD_D" jdbcType="INTEGER" property="lnCardNo" />
+  </resultMap>
+</mapper>

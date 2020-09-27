@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.sj.base.BaseMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.ibm.db2.jcc.DB2Driver"
+                        connectionURL="jdbc:db2://192.168.101.183:50000/WJDB"
+                        userId="wjcrm"
+                        password="wjcrm">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.sj.entity" targetProject="src/main/java">
+            <property name="trimStrings" value="true"/>
+            <property name="rootClass" value="com.sj.base.BaseEntity"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.sj.mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.sj.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+
+
+        <table tableName="EDOC_CREDITQUERY" domainObjectName="EdocCreditQueryEntity">
+            <generatedKey column="SERIALNO" sqlStatement="DB2" identity="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>

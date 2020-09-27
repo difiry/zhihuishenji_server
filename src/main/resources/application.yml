@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: @profileActive@
+  application:
+    name: outer
+  messages:
+    encoding: UTF-8
+  http:
+
+  aop:
+    auto: true
+mybatis:
+  type-aliases-package: com.sj.entity
+  mapper-locations: classpath*:com/sj/mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+mapper:
+  mappers: com.sj.base.BaseMapper
+  not-empty: false
+    #dubbo:
+    #application:
+    ##### 注册服务的名称
+    #name: wljrb
+    ##### 注册中心地址
+    #registry:
+    #address: zookeeper://192.168.101.2:2181
+    ##### 调用服务超时时间
+    #consumer:
+  #timeout: 500000
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
